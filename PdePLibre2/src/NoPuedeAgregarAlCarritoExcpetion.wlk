@@ -1,0 +1,4 @@
+class NoPuedeAgregarAlCarritoExcpetion inherits Exception{
+	
+	
+}
