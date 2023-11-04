@@ -1,0 +1,78 @@
+class ArbolNavidenio{
+    regalos 
+    tarjetas
+    adornos
+
+    {abstract} capacidadParaContenerRegalos()
+    agregarRegalo(unRegalo)
+    cantidadRegalos()
+    beneficiarios()
+    costoTotalRegalos()
+    preciosRegalos()
+    importanciaArbolNavidenio()
+    importanciaAdornosArbol()
+    adornoMasPesado()
+}
+
+class ArbolNatural extends ArbolNavidenio{
+    vejez
+    tamanioTronco
+
+    capacidadParaContenerRegalos()
+}
+
+class ArbolArtificial extends ArbolNavidenio{
+    varas
+
+    capacidadParaContenerRegalos()
+}
+
+class Regalo{
+    precio
+    destinatario
+
+    destinatario()
+    precio()
+    esRegaloTeQuieroMucho()
+}
+
+class Tarjeta{
+    destinatario
+    valorAdjunto
+    precio
+
+    destinatario()
+    precio()
+}
+
+class Adorno{
+    pesoBase
+    importancia
+    coeficienteSuperioridad
+
+    importancia()
+    peso()
+}
+
+class Luz extends Adorno{
+    luminosidad
+
+    importancia()
+}
+
+class FiguraElaborada extends Adorno{
+    volumen
+
+    importancia()
+}
+
+class Guirnalda extends Adorno{
+    aniosEnUso
+
+    peso()
+    anioDeCompra()
+}
+
+ArbolNavidenio -->"*" Regalo
+ArbolNavidenio -->"*" Tarjeta
+ArbolNavidenio -->"*" Adorno
