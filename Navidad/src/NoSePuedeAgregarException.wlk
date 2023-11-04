@@ -1,0 +1,4 @@
+class NoSePuedeAgregarException inherits Exception {
+	
+	
+}
